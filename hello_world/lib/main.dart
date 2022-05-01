@@ -11,17 +11,36 @@ void main() {
 
 class RandomWords extends StatefulWidget {
   const RandomWords({Key? key}) : super(key: key);
+
   @override
   _RandomWordsState createState() => _RandomWordsState();
 }
 
-class _RandomWordsState extends State<RandomWords>{
+class _RandomWordsState extends State<RandomWords> {
+  final _suggestions = <WordPair>[];
+  final _biggerFont = const TextStyle(fontSize: 18);
+
   @override
   Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+
+    return ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: (context, i) {
+          if (i.isOdd) return const Divider();
+
+          final index = i ~/ 2;
+          if (index >= _suggestions.length) {
+            _suggestions.addAll(generateWordPairs().take(10));
+          }
+          return ListTile(
+            title: Text(
+              _suggestions[index].asPascalCase,
+              style: _biggerFont,
+            ),
+          );
+        });
+    }
   }
-}
 
 
 class MyApp extends StatelessWidget {
@@ -29,12 +48,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'Welcome to Flutter',
+      title: 'Startup Name Generator',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Belajar Flutter gesss'),
+          title: const Text('Startup Name Generator Anjass'),
         ),
         body: const Center(
           child: RandomWords(),
