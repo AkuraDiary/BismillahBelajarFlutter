@@ -23,7 +23,6 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
         itemBuilder: (context, i) {
@@ -42,13 +41,22 @@ class _RandomWordsState extends State<RandomWords> {
             trailing: Icon(
               alreadySaved ? Icons.favorite : Icons.favorite_border,
               color: alreadySaved ? Colors.red : null,
-              semanticLabel: alreadySaved ? 'Remove from favorites' : 'Add to favorites',
+              semanticLabel:
+                  alreadySaved ? 'Remove from favorites' : 'Add to favorites',
             ),
+            onTap: () {
+              setState(() {
+                if (alreadySaved) {
+                  _saved.remove(_suggestions[index]);
+                } else {
+                  _saved.add(_suggestions[index]);
+                }
+              });
+            },
           );
         });
-    }
   }
-
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
