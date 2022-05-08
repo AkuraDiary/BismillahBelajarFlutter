@@ -23,7 +23,18 @@ class _RandomWordsState extends State<RandomWords> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Startup Name Generator'),
+    actions: [
+      IconButton(
+    icon: const Icon(Icons.list),
+    onPressed: _pushSaved,
+    tooltip: "Saved Suggestion"
+    ),
+    ],
+    ),
+    body: ListView.builder(
         padding: const EdgeInsets.all(16.0),
         itemBuilder: (context, i) {
           if (i.isOdd) return const Divider();
@@ -54,7 +65,11 @@ class _RandomWordsState extends State<RandomWords> {
               });
             },
           );
-        });
+        })
+    );
+  }
+
+  void _pushSaved() {
   }
 }
 
