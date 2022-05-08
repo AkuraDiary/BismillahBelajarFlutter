@@ -63,6 +63,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: 'Startup Name Generator',
+      home: RandomWords(),
+    );
+    /*
     return MaterialApp(
       title: 'Startup Name Generator',
       home: Scaffold(
@@ -74,5 +79,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+    */
   }
 }
