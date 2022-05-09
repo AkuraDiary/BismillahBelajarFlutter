@@ -82,7 +82,7 @@ class _RandomWordsState extends State<RandomWords> {
               );
             },
           );
-          final divided = title.isNotEmpty ? tiles.toList() : <Widget>[];
+          final divided = tiles.isNotEmpty ? tiles.toList() : <Widget>[];
           return Scaffold(
             appBar: AppBar(
               title: const Text('Saved Suggestions'),
