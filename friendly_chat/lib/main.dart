@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Friendly Chat'),
+        title: Text('Friendly Chat bois'),
       ),
       body: _buildTextComponent(),
     );
@@ -58,7 +58,7 @@ class FriendlyChatApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Friendly Chat',
+      title: 'Friendly Chat App',
       theme: ThemeData(
         // This is the theme of your application.
         primarySwatch: Colors.blue,
