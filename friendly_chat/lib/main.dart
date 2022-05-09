@@ -45,6 +45,7 @@ class _ChatScreenState extends State<ChatScreen> {
       appBar: AppBar(
         title: Text('Friendly Chat'),
       ),
+      body: _buildTextComponent(),
     );
   }
 }
