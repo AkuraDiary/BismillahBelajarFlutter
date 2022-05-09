@@ -14,8 +14,30 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class ChatScreen extends StatelessWidget {
+class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
+
+  @override
+  State<ChatScreen> createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
+  final _textController = TextEditingController();
+
+  Widget _buildTextComponent() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 8),
+      child: TextField(
+        controller: _textController,
+        onSubmitted: _handleSubmitted,
+        decoration: InputDecoration.collapsed(hintText: "Send a message"),
+      ),
+    );
+  }
+
+  void _handleSubmitted(String text) {
+    _textController.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +48,6 @@ class ChatScreen extends StatelessWidget {
     );
   }
 }
-
 
 class FriendlyChatApp extends StatelessWidget {
   const FriendlyChatApp({
