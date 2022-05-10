@@ -34,7 +34,7 @@ class _ChatScreenState extends State<ChatScreen> {
                 controller: _textController,
                 onSubmitted: _handleSubmitted,
                 decoration:
-                    InputDecoration.collapsed(hintText: "Send a message"),
+                    const InputDecoration.collapsed(hintText: "Send a message"),
               ),
             ),
             Container(
@@ -54,7 +54,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Friendly Chat bois'),
+        title: const Text('Friendly Chat bois'),
       ),
       body: _buildTextComponent(),
     );
