@@ -14,11 +14,41 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class FriendlyChatApp extends StatelessWidget {
+  const FriendlyChatApp({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Friendly Chat App',
+      theme: ThemeData(
+        // This is the theme of your application.
+        primarySwatch: Colors.blue,
+      ),
+      home: const ChatScreen(),
+    );
+  }
+}
+
+
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
+}
+
+
+class chatMessage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 10.0),
+      child: Row(),
+    );
+  }
 }
 
 class _ChatScreenState extends State<ChatScreen> {
@@ -64,20 +94,4 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
-class FriendlyChatApp extends StatelessWidget {
-  const FriendlyChatApp({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Friendly Chat App',
-      theme: ThemeData(
-        // This is the theme of your application.
-        primarySwatch: Colors.blue,
-      ),
-      home: const ChatScreen(),
-    );
-  }
-}
