@@ -32,7 +32,6 @@ class FriendlyChatApp extends StatelessWidget {
   }
 }
 
-
 class ChatScreen extends StatefulWidget {
   const ChatScreen({Key? key}) : super(key: key);
 
@@ -40,27 +39,39 @@ class ChatScreen extends StatefulWidget {
   State<ChatScreen> createState() => _ChatScreenState();
 }
 
-
 class ChatMessage extends StatelessWidget {
-  const ChatMessage({
+  ChatMessage({
     required this.text,
     Key? key,
   }) : super(key: key);
   final String text;
+
+  String _name = 'Your Name';
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10.0),
       child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-      Container(
-      margin: const EdgeInsets.only(right: 16.0),
-      child: CircleAvatar(child: Text(_name[0]),
-      )
-      ],
-    ),);
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+              margin: const EdgeInsets.only(right: 16.0),
+              child: CircleAvatar(child: Text(_name[0]))
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(_name, style: Theme.of(context).textTheme.headline4),
+              Container(
+                margin: const EdgeInsets.only(top: 5.0),
+                child: Text(text),
+              )
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -69,10 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Widget _buildTextComponent() {
     return IconTheme(
-      data: IconThemeData(color: Theme
-          .of(context)
-          .colorScheme
-          .secondary),
+      data: IconThemeData(color: Theme.of(context).colorScheme.secondary),
       child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Row(
@@ -81,17 +89,19 @@ class _ChatScreenState extends State<ChatScreen> {
                 child: TextField(
                   controller: _textController,
                   onSubmitted: _handleSubmitted,
-                  decoration:
-                  const InputDecoration.collapsed(hintText: "Send a message"),
+                  decoration: const InputDecoration.collapsed(
+                      hintText: "Send a message"),
                 ),
               ),
               Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4.0),
                   child: IconButton(
                       icon: const Icon(Icons.send),
-                      onPressed: () => _handleSubmitted(_textController.text)))
+                      onPressed: () => _handleSubmitted(_textController.text))
+              ),
             ],
-          )),
+          )
+      ),
     );
   }
 
@@ -109,5 +119,3 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 }
-
-
