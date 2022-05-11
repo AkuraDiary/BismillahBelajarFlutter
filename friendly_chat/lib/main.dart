@@ -41,13 +41,26 @@ class ChatScreen extends StatefulWidget {
 }
 
 
-class chatMessage extends StatelessWidget {
+class ChatMessage extends StatelessWidget {
+  const ChatMessage({
+    required this.text,
+    Key? key,
+  }) : super(key: key);
+  final String text;
+
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 10.0),
-      child: Row(),
-    );
+      child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+      Container(
+      margin: const EdgeInsets.only(right: 16.0),
+      child: CircleAvatar(child: Text(_name[0]),
+      )
+      ],
+    ),);
   }
 }
 
@@ -56,7 +69,10 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Widget _buildTextComponent() {
     return IconTheme(
-      data: IconThemeData(color: Theme.of(context).colorScheme.secondary),
+      data: IconThemeData(color: Theme
+          .of(context)
+          .colorScheme
+          .secondary),
       child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Row(
@@ -66,7 +82,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   controller: _textController,
                   onSubmitted: _handleSubmitted,
                   decoration:
-                      const InputDecoration.collapsed(hintText: "Send a message"),
+                  const InputDecoration.collapsed(hintText: "Send a message"),
                 ),
               ),
               Container(
