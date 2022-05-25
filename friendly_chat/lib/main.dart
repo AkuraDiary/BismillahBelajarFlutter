@@ -45,7 +45,7 @@ class FriendlyChatApp extends StatelessWidget {
 }
 
 class ChatMessage extends StatelessWidget {
-  ChatMessage({
+  const ChatMessage({
     required this.text,
     required this.animationController,
     Key? key,
