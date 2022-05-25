@@ -98,6 +98,43 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
   final FocusNode _focusNode = FocusNode();
   bool _isComposing = false;
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Friendly Chat bois'),
+      ),
+      body: Container(
+        decoration: Theme.of(context).platform == TargetPlatform.iOS
+            ? BoxDecoration(
+          border: Border(
+            top: BorderSide(color: Colors.grey[200]!),
+          ),
+        )
+            : null,
+        child : Column(
+          children : [
+            Flexible(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(8.0),
+                reverse: true,
+                itemBuilder: (_, int index) => _messages[index],
+                itemCount: _messages.length,
+              ),
+            ),
+            const Divider(height: 1.0),
+            Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).cardColor,
+              ),
+              child: _buildTextComponent(),
+            ),
+          ]
+        )
+      ),
+    );
+  }
+
   Widget _buildTextComponent() {
     return IconTheme(
       data: IconThemeData(color: Theme.of(context).colorScheme.secondary),
@@ -142,15 +179,5 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
     });
     _focusNode.requestFocus();
     message.animationController.forward();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Friendly Chat bois'),
-      ),
-      body: _buildTextComponent(),
-    );
   }
 }
