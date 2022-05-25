@@ -12,8 +12,7 @@ final ThemeData kIOSTheme = ThemeData(
 );
 
 final ThemeData kDefaultTheme = ThemeData(
-  primarySwatch: Colors.purple,
-  accentColor: Colors.orangeAccent[400],
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple).copyWith(secondary: Colors.orangeAccent[400]),
 );
 
 String _name = "Your Name";
@@ -37,10 +36,9 @@ class FriendlyChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Friendly Chat App',
-      theme: ThemeData(
-        // This is the theme of your application.
-        primarySwatch: Colors.blue,
-      ),
+      theme: defaultTargetPlatform == TargetPlatform.iOS
+        ? kIOSTheme
+        : kDefaultTheme,
       home: const ChatScreen(),
     );
   }
