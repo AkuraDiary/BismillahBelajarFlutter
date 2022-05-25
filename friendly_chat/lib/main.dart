@@ -145,16 +145,28 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
               Flexible(
                 child: TextField(
                   controller: _textController,
-                  onSubmitted: _handleSubmitted,
-                  decoration: const InputDecoration.collapsed(
-                      hintText: "Send a message"),
+                  onChanged: (text){
+                    setState(() {
+                      _isComposing = text.isNotEmpty;
+                    });
+                  },
+                  onSubmitted: _isComposing ? _handleSubmitted : null,
+                  decoration: const InputDecoration.collapsed(hintText: "Send a message"),
+                  focusNode: _focusNode,
                 ),
               ),
               Container(
                   margin: const EdgeInsets.symmetric(horizontal: 4.0),
-                  child: IconButton(
+                  child: Theme.of(context).platform == TargetPlatform.iOS ?
+                  CupertinoButton(
+                    child: const Text("Send"),
+                    onPressed: _isComposing ? () => _handleSubmitted(_textController.text) : null,
+                  ) :
+                  IconButton(
                       icon: const Icon(Icons.send),
-                      onPressed: () => _handleSubmitted(_textController.text))
+                      onPressed: _isComposing ? () => _handleSubmitted(_textController.text)
+                          : null
+                  )
               ),
             ],
           )
@@ -180,4 +192,6 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
     _focusNode.requestFocus();
     message.animationController.forward();
   }
+
+
 }
