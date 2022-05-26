@@ -25,6 +25,12 @@ class _OutlinedCardState extends State<OutlinedCard> {
           : SystemMouseCursors.basic,
       child: Container(
         child: widget.child,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Theme.of(context).dividerColor,
+            width: 1,
+          ),
+        ),
         // Add box decoration here
       ),
     );
