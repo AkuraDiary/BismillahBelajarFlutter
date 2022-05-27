@@ -41,8 +41,8 @@ class _MyAppState extends State<MyApp> {
                     debugShowCheckedModeBanner: false,
                     title: 'Flutter Demo',
                     theme: theme.light(settings.value.sourceColor),// Add theme
-                    // Add dark theme
-                    // Add theme mode
+                    darkTheme: theme.dark(settings.value.sourceColor),// Add dark theme
+                    themeMode: theme.themeMode(),// Add theme mode
                     routeInformationParser: appRouter.routeInformationParser,
                     routerDelegate: appRouter.routerDelegate,
                   );
