@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
+  var informationTextStyle = TextStyle(fontFamily: 'Oxygen');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,17 +38,17 @@ class DetailScreen extends StatelessWidget {
                   Column(children: <Widget>[
                     Icon(Icons.calendar_today),
                     SizedBox(height: 8.0),
-                    Text("Open Everyday")
+                    Text("Open Everyday", style: informationTextStyle),
                   ]),
                   Column(children: <Widget>[
                     Icon(Icons.lock_clock_rounded),
                     SizedBox(height: 8.0),
-                    Text("09:00 - 20:00")
+                    Text("09:00 - 20:00", style: informationTextStyle),
                   ]),
                   Column(children: <Widget>[
                     Icon(Icons.monetization_on_rounded),
                     SizedBox(height: 8.0),
-                    Text("RP 25.000")
+                    Text("RP 25.000", style: informationTextStyle)
                   ]),
                   
                 ],
