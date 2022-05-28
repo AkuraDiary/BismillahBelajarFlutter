@@ -22,13 +22,31 @@ class DetailWebPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Wisata bandung",
-                    style: TextStyle(
-                      fontSize: 32,
-                      fontFamily: 'Staatliches',
+                  SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            child: IconButton(
+                                icon: Icon(Icons.arrow_back, color: Colors.blue),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                }),
+                          ),
+                          Text(
+                            "Wisata bandung",
+                            style: TextStyle(
+                              fontSize: 32,
+                              fontFamily: 'Staatliches',
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
+
                   SizedBox(height: 32),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
