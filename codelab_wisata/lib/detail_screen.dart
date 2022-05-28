@@ -4,9 +4,6 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Detail Screen'),
-      ),
         body: SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -49,7 +46,7 @@ class DetailScreen extends StatelessWidget {
                   SizedBox(height: 8.0),
                   Text("RP 25.000")
                 ]),
-
+                
               ],
             ),
           ),
@@ -63,6 +60,9 @@ class DetailScreen extends StatelessWidget {
               style: TextStyle(fontSize: 16.0),
             ),
           ),
+
+          /*IMAGE FROM NETWORK*/
+          Image.network('https://media-cdn.tripadvisor.com/media/photo-s/0d/7c/59/70/farmhouse-lembang.jpg')
 
         ],
       ),
