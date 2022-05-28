@@ -12,10 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Wisata Bbandung',
+      title: 'Wisata Bandung',
+
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: DetailScreen(),
     );
   }
