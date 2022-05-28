@@ -6,14 +6,13 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
+        body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
             /*IMAGES*/
-            Image.asset('images/farm-house.jpg'),
-            
+                Image.asset('images/farm-house.jpg'),
+
             /*JUDUL*/
             Container(
               margin: EdgeInsets.only(top: 16.0),
@@ -50,7 +49,7 @@ class DetailScreen extends StatelessWidget {
                     SizedBox(height: 8.0),
                     Text("RP 25.000", style: informationTextStyle)
                   ]),
-                  
+
                 ],
               ),
             ),
@@ -92,6 +91,6 @@ class DetailScreen extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }
