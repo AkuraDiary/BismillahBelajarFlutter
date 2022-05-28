@@ -5,16 +5,31 @@ class DetailScreen extends StatelessWidget {
   final TourismPlace place;
 
   DetailScreen({required this.place});
+
   var informationTextStyle = TextStyle(fontFamily: 'Oxygen');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+
+            Stack(
               children: <Widget>[
-            /*IMAGES*/
+                /*MAIN IMAGES*/
                 Image.asset('images/farm-house.jpg'),
+                SafeArea(
+                    child: IconButton(
+                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        }
+                    ),
+                ),
+              ],
+            ),
 
             /*JUDUL*/
             Container(
@@ -36,7 +51,6 @@ class DetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-
                   Column(children: <Widget>[
                     Icon(Icons.calendar_today),
                     SizedBox(height: 8.0),
@@ -52,7 +66,6 @@ class DetailScreen extends StatelessWidget {
                     SizedBox(height: 8.0),
                     Text(place.ticketPrice, style: informationTextStyle)
                   ]),
-
                 ],
               ),
             ),
@@ -72,14 +85,14 @@ class DetailScreen extends StatelessWidget {
               height: 150.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: place.imageUrls.map((url){
+                children: place.imageUrls.map((url) {
                   return Padding(
                     padding: const EdgeInsets.all(4.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.network(url),
                     ),
-                    );
+                  );
                 }).toList(),
               ),
             ),
