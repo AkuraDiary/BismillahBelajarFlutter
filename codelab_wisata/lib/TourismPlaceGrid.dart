@@ -3,12 +3,14 @@ import 'package:codelab_wisata/model/tourism_place.dart';
 import 'package:flutter/material.dart';
 
 class TourismPlaceGrid extends StatelessWidget {
+  final int gridCount;
+  TourismPlaceGrid({required this.gridCount});
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24.0),
       child: GridView.count(
-            crossAxisCount: 4,
+            crossAxisCount: gridCount,
             children: tourismPlaceList.map((place) {
               return InkWell(
                 onTap: () {
