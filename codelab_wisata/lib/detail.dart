@@ -6,6 +6,7 @@ class DetailScreen extends StatelessWidget{
     return Scaffold(
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container (
               margin: EdgeInsets.only(top: 16.0),
@@ -13,7 +14,7 @@ class DetailScreen extends StatelessWidget{
                   "Farm House Lembang",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 30.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
