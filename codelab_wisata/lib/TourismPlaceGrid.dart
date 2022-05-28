@@ -4,12 +4,18 @@ import 'package:flutter/material.dart';
 
 class TourismPlaceGrid extends StatelessWidget {
   final int gridCount;
+
   TourismPlaceGrid({required this.gridCount});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(24.0),
-      child: GridView.count(
+      child: Scrollbar(
+        thumbVisibility: true,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: GridView.count(
             crossAxisCount: gridCount,
             crossAxisSpacing: 16,
             mainAxisSpacing: 16,
@@ -53,6 +59,8 @@ class TourismPlaceGrid extends StatelessWidget {
               );
             }).toList(),
           ),
+        ),
+      ),
     );
   }
 }
