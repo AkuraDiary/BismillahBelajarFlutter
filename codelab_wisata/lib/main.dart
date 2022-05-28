@@ -1,4 +1,4 @@
-import 'package:codelab_wisata/detail.dart';
+import 'package:codelab_wisata/detail_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

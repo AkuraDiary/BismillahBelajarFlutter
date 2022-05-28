@@ -11,6 +11,9 @@ class DetailScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          /*IMAGES*/
+          Image.asset('images/farm-house.jpg'),
+          
           /*JUDUL*/
           Container(
             margin: EdgeInsets.only(top: 16.0),
