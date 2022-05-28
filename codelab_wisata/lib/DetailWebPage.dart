@@ -93,6 +93,31 @@ class DetailWebPage extends StatelessWidget{
                               ),
                               ),
                             ),
+                          Column(
+                            children: [
+                              ClipRRect(
+                                child: Image.asset(place.imageAsset),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              SizedBox(height: 16),
+                              Container(
+                                height: 150,
+                                padding: const EdgeInsets.only(bottom: 16),
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: place.imageUrls.map((url) {
+                                    return Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.network(url),
+                                      ),
+                                    );
+                                  }).toList(),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
