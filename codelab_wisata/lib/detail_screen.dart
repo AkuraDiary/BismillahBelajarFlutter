@@ -1,3 +1,5 @@
+import 'package:codelab_wisata/DetailMobilePage.dart';
+import 'package:codelab_wisata/DetailWebPage.dart';
 import 'package:codelab_wisata/model/tourism_place.dart';
 import 'package:flutter/material.dart';
 
