@@ -21,6 +21,7 @@ class DetailScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Staatliches',
                 ),
               ),
             ),
