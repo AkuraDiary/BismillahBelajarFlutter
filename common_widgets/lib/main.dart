@@ -15,12 +15,34 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World'),
-        ),
-      )
+      home: FirstScreen(), //calls the first screen
     );
   }
 }
 
+class FirstScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+              Icons.menu,
+              color: Colors.white
+          ),
+          onPressed: () {},
+        ),
+        title: const Text("First Screen"),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
