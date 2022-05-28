@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const Scaffold(
         body: Center(
-          child: Heading(text: "Hello World!"),
+          child: BiggerText(text: "Hello World!")//Heading(text: "Hello World!"),
         ),
       ),
     );
