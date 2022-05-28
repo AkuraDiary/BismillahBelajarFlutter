@@ -15,18 +15,22 @@ class DetailScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-
             Stack(
               children: <Widget>[
                 /*MAIN IMAGES*/
                 Image.asset('images/farm-house.jpg'),
                 SafeArea(
-                    child: IconButton(
-                        icon: Icon(Icons.arrow_back, color: Colors.white),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        }
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: IconButton(
+                          icon: Icon(Icons.arrow_back, color: Colors.blue),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          }),
                     ),
+                  ),
                 ),
               ],
             ),
