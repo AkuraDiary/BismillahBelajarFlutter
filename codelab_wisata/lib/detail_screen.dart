@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatelessWidget {
-  var informationTextStyle = TextStyle(fontFamily: 'Oxygen');
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
+          /*
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -88,7 +89,7 @@ class DetailScreen extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        ),*/
       ),
     );
   }
