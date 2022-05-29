@@ -66,7 +66,7 @@ var bookCatalougeList = [
   ),
 
   Books(
-      title: 'DEMON SLAYER : Kimetsu no Yaiba 08',
+      title: 'Kimetsu no Yaiba 08',
       author: "Koyoharu Gotouge",
       type: "Manga",
       pages: "200",
