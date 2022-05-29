@@ -20,7 +20,7 @@ class BooksGridLayout extends StatelessWidget {
       child: Scrollbar(
         thumbVisibility: true,
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(8.0),
           child: GridView.count(
             scrollDirection: scrollDirection,
             crossAxisCount: gridCount,
