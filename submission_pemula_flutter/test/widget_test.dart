@@ -7,6 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:submission_pemula_flutter/app.dart';
 
 import 'package:submission_pemula_flutter/main.dart';
 
