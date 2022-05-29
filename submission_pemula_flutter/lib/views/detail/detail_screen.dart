@@ -14,7 +14,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth > 600) {
+          if (constraints.maxWidth > 800) {
             return DetailDesktopPage(bookItem: bookItem);
           } else {
             return DetailMobilePage(bookItem: bookItem);
