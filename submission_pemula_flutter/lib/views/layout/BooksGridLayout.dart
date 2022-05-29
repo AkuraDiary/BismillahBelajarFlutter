@@ -52,7 +52,7 @@ class BooksGridLayout extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 12.0, top: 10.0),
                         child: Text(
                           bookItem.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class BooksGridLayout extends StatelessWidget {
                             left: 12.0, bottom: 10.0, top: 6.0),
                         child: Text(
                           bookItem.author,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 12.0,
                           ),

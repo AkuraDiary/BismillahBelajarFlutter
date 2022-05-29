@@ -7,7 +7,7 @@ import '../main_screen.dart';
 class DetailDesktopPage extends StatefulWidget {
   final Books bookItem;
 
-  DetailDesktopPage({required this.bookItem});
+  const DetailDesktopPage({required this.bookItem});
 
   @override
   State<DetailDesktopPage> createState() => _DetailDesktopPageState();
@@ -33,7 +33,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
             horizontal: 64,
           ),
           child: Center(
-            child: Container(
+            child: SizedBox(
               width: 1200,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,16 +46,16 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                           CircleAvatar(
                             backgroundColor: Colors.white,
                             child: IconButton(
-                                icon: Icon(Icons.arrow_back, color: Colors.deepOrange),
+                                icon: const Icon(Icons.arrow_back, color: Colors.deepOrange),
                                 onPressed: () {
                                   Navigator.pop(context);
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
                                 }),
                           ),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                           Text(
                             widget.bookItem.title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 32,
                               fontFamily: 'Montserrat',
                             ),
@@ -65,7 +65,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                     ),
                   ),
 
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -75,7 +75,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                               Column(
                                 children: [
                                   Card(
-                                    margin: EdgeInsets.all(16),
+                                    margin: const EdgeInsets.all(16),
                                     elevation: 4,
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
@@ -85,13 +85,13 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(height: 16),
+                                  const SizedBox(height: 16),
                                 ],
                               ),
                             ],
                           )
                       ),
-                      SizedBox(width: 32),
+                      const SizedBox(width: 32),
 
                       Expanded(
                         child: Card(
@@ -104,68 +104,66 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
-                                Container(
-                                  child: Text(
-                                    widget.bookItem.title,
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontSize: 30.0,
-                                      fontFamily: 'monsterrat',
-                                    ),
+                                Text(
+                                  widget.bookItem.title,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontSize: 30.0,
+                                    fontFamily: 'monsterrat',
                                   ),
                                 ),
 
-                                SizedBox(height: 16),
+                                const SizedBox(height: 16),
 
                                 Row(
                                   children: <Widget>[
-                                    Icon(Icons.book),
-                                    SizedBox(width: 8.0),
+                                    const Icon(Icons.book),
+                                    const SizedBox(width: 8.0),
                                     Text(
                                       widget.bookItem.type,
 
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 8.0),
+                                const SizedBox(height: 8.0),
 
                                 Row(
                                   children: <Widget>[
-                                    Icon(Icons.person),
-                                    SizedBox(width: 8.0),
+                                    const Icon(Icons.person),
+                                    const SizedBox(width: 8.0),
                                     Text(
                                       widget.bookItem.author,
 
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 8.0),
+                                const SizedBox(height: 8.0),
                                 Row(
                                   children: <Widget>[
-                                    Icon(Icons.calendar_today),
-                                    SizedBox(width: 8.0),
+                                    const Icon(Icons.calendar_today),
+                                    const SizedBox(width: 8.0),
                                     Text(
                                       widget.bookItem.date,
 
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 8.0),
+                                const SizedBox(height: 8.0),
                                 Row(
                                   children: <Widget>[
-                                    Icon(Icons.newspaper),
-                                    SizedBox(width: 8.0),
+                                    const Icon(Icons.newspaper),
+                                    const SizedBox(width: 8.0),
                                     Text(
                                       widget.bookItem.pages,
 
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 8.0),
+                                const SizedBox(height: 8.0),
                                 Row(
                                   children: <Widget>[
-                                    Icon(Icons.menu_book),
-                                    SizedBox(width: 8.0),
+                                    const Icon(Icons.menu_book),
+                                    const SizedBox(width: 8.0),
                                     Text(
                                       widget.bookItem.publisher,
 
@@ -177,7 +175,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 16.0),
+                      const SizedBox(width: 16.0),
                       Expanded(
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -185,21 +183,21 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                           ),
                           elevation: 8.0,
                           child: Container(
-                            padding: EdgeInsets.all(24),
+                            padding: const EdgeInsets.all(24),
                             child: Column(
                               children: [
-                                Text(
+                                const Text(
                                   "Deskripsi : ",
                                   style: TextStyle(
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(height: 8.0),
+                                const SizedBox(height: 8.0),
                                 Text(
                                   widget.bookItem.description,
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 16.0,
                                     fontFamily: 'Montserrat',
                                   ),
@@ -212,8 +210,8 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                     ],
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 20.0),
-                    child: Text("Rekomendasi lainya: ",
+                    margin: const EdgeInsets.only(top: 20.0),
+                    child: const Text("Rekomendasi lainya: ",
                         style: TextStyle(
                             fontSize: 16,
                             fontFamily: "Montserrat",
@@ -222,7 +220,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(top: 4.0),
+                    padding: const EdgeInsets.only(top: 4.0),
                     height: 250.0,
                     child: BooksGridLayout(
                       gridCount: 5,

@@ -5,7 +5,7 @@ import '../../models/books.dart';
 class DetailMobilePage extends StatelessWidget {
   final Books bookItem;
 
-  DetailMobilePage({required this.bookItem});
+  const DetailMobilePage({required this.bookItem});
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +46,11 @@ class DetailMobilePage extends StatelessWidget {
                     ),
                     /*JUDUL*/
                     Container(
-                      margin: EdgeInsets.only(top: 16.0, left: 24.0),
+                      margin: const EdgeInsets.only(top: 16.0, left: 24.0),
                       child: Text(
                         bookItem.title,
                         textAlign: TextAlign.left,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Staatliches',
@@ -58,12 +58,12 @@ class DetailMobilePage extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 16.0, left: 24.0),
+                      margin: const EdgeInsets.only(top: 16.0, left: 24.0),
                       child: Column(children: <Widget>[
-                        Icon(Icons.book),
-                        SizedBox(height: 8.0),
+                        const Icon(Icons.book),
+                        const SizedBox(height: 8.0),
                         Text(bookItem.type),
-                        SizedBox(height: 24.0),
+                        const SizedBox(height: 24.0),
                       ]),
                     ),
                   ],
@@ -75,7 +75,7 @@ class DetailMobilePage extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       child: IconButton(
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.arrow_back,
                             color: Colors.deepOrange,
                           ),
@@ -93,8 +93,8 @@ class DetailMobilePage extends StatelessWidget {
 
             /*KONTENT DESKRIPSI*/
             Container(
-              padding: EdgeInsets.only(left: 24.0),
-              child: Text(
+              padding: const EdgeInsets.only(left: 24.0),
+              child: const Text(
                 "Deskripsi buku : ",
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
@@ -102,42 +102,42 @@ class DetailMobilePage extends StatelessWidget {
             ),
 
             Container(
-              padding: EdgeInsets.only(top: 16.0, left: 24.0, right: 24.0),
+              padding: const EdgeInsets.only(top: 16.0, left: 24.0, right: 24.0),
               child: Text(
                 bookItem.description,
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontSize: 16.0),
+                style: const TextStyle(fontSize: 16.0),
               ),
             ),
 
 
             /*ICONS*/
             Container(
-              margin: EdgeInsets.all(16.0),
+              margin: const EdgeInsets.all(16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
                   Column(children: <Widget>[
-                    Icon(Icons.person),
-                    SizedBox(height: 8.0),
+                    const Icon(Icons.person),
+                    const SizedBox(height: 8.0),
                     Text(bookItem.author),
 
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
 
-                    Icon(Icons.calendar_today),
-                    SizedBox(height: 8.0),
+                    const Icon(Icons.calendar_today),
+                    const SizedBox(height: 8.0),
                     Text(bookItem.date),
                   ]),
                   Column(children: <Widget>[
-                    Icon(Icons.newspaper),
-                    SizedBox(height: 8.0),
-                    Text(bookItem.pages + " Lembar"),
+                    const Icon(Icons.newspaper),
+                    const SizedBox(height: 8.0),
+                    Text("${bookItem.pages} Lembar"),
 
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
 
-                    Icon(Icons.menu_book),
-                    SizedBox(height: 8.0),
+                    const Icon(Icons.menu_book),
+                    const SizedBox(height: 8.0),
                     Text(bookItem.publisher, softWrap: true,),
                   ]),
                 ],

@@ -14,8 +14,8 @@ class HomeMobileLayout extends StatelessWidget {
             SafeArea(
               child: Container(
                 alignment: Alignment.topLeft,
-                padding: EdgeInsets.only(left: 16, top: 20),
-                child: Text("Selamat Datang di Perpustakaan",
+                padding: const EdgeInsets.only(left: 16, top: 20),
+                child: const Text("Selamat Datang di Perpustakaan",
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -26,8 +26,8 @@ class HomeMobileLayout extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(left: 16, right: 16, top: 20),
-              child: Text("Best Seller Today",
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 20),
+              child: const Text("Best Seller Today",
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
@@ -36,7 +36,7 @@ class HomeMobileLayout extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 8.0, left: 16, right: 8),
+              padding: const EdgeInsets.only(top: 8.0, left: 16, right: 8),
               height: 450.0,
               child: BooksGridLayout(
                 gridCount: 1,
@@ -46,8 +46,8 @@ class HomeMobileLayout extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(left: 16, right: 16, top: 16),
-              child: Text("Rekomendasi lainya",
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+              child: const Text("Rekomendasi lainya",
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
@@ -56,7 +56,7 @@ class HomeMobileLayout extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 8.0),
               height: 250.0,
               child: BooksGridLayout(
                 gridCount: 1,
@@ -67,8 +67,8 @@ class HomeMobileLayout extends StatelessWidget {
 
             Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(left: 16, right: 16, top: 16),
-              child: Text("Buku Terbaru",
+              padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
+              child: const Text("Buku Terbaru",
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
@@ -77,7 +77,7 @@ class HomeMobileLayout extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 8.0),
               height: 250.0,
               child: BooksGridLayout(
                 gridCount: 1,
