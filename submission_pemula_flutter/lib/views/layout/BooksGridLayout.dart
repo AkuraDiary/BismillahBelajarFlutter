@@ -5,28 +5,41 @@ import '../detail/detail_screen.dart';
 
 class BooksGridLayout extends StatelessWidget{
   final int gridCount;
-  BooksGridLayout({required this.gridCount});
+  final Axis scrollDirection;
+  final Iterable<Books> catalouge;
+
+  BooksGridLayout({
+    required this.gridCount,
+    required this.scrollDirection,
+    required this.catalouge
+  });
+
+
+
 
   @override
   Widget build(BuildContext context){
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(16.0),
       child: Scrollbar(
         thumbVisibility: true,
         child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: GridView.count(
+            scrollDirection: scrollDirection,
             crossAxisCount: gridCount,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            children: bookCatalougeList.map((bookItem) {
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+            children: catalouge.map((bookItem) {
               return InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return DetailScreen(bookItem: bookItem);
                   }));
                 },
+
                 child: Card(
+                  elevation: 2,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -36,9 +49,9 @@ class BooksGridLayout extends StatelessWidget{
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(height: 8),
+
                       Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 8.0, top: 8.0),
                         child: Text(
                           bookItem.title,
                           style: TextStyle(
@@ -48,7 +61,7 @@ class BooksGridLayout extends StatelessWidget{
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8.0, bottom: 8.0),
+                        padding: const EdgeInsets.only(left: 8.0, bottom: 8.0, top: 6.0),
                         child: Text(
                           bookItem.author,
                         ),

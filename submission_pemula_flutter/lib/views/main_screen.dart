@@ -15,9 +15,9 @@ class MainScreen extends StatelessWidget {
           if (constraints.maxWidth <= 600) {
             return BooksGridLayout(gridCount: 2, scrollDirection: Axis.vertical, catalouge: bookCatalougeList,);
           } else if (constraints.maxWidth <= 1200) {
-            return Text("Layout for web above 600 until 1200");
+            return BooksGridLayout(gridCount: 4,  scrollDirection: Axis.vertical, catalouge: bookCatalougeList,);
           } else {
-            return Text("Layout for web large");
+            return BooksGridLayout(gridCount: 7,  scrollDirection: Axis.vertical, catalouge: bookCatalougeList,);
           }
         }
     )
