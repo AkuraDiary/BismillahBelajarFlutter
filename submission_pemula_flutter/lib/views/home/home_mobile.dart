@@ -20,7 +20,6 @@ class HomeMobileLayout extends StatelessWidget {
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Montserrat",
-
                     )
                 ),
               ),

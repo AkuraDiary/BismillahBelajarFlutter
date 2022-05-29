@@ -20,7 +20,6 @@ class HomeDesktopLayout extends StatelessWidget {
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Montserrat",
-
                     )
                 ),
               ),
@@ -62,8 +61,8 @@ class HomeDesktopLayout extends StatelessWidget {
               padding: EdgeInsets.only(top: 6.0),
               height: 350.0,
               child: BooksGridLayout(
-                gridCount: 1,
-                scrollDirection: Axis.horizontal,
+                gridCount: 6,
+                scrollDirection: Axis.vertical,
                 catalouge: bookCatalougeList.reversed,
               ),
             ),

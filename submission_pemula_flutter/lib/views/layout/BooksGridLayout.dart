@@ -19,8 +19,6 @@ class BooksGridLayout extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Scrollbar(
-        thumbVisibility: true,
-        controller: _scrollerController,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
@@ -55,7 +53,7 @@ class BooksGridLayout extends StatelessWidget {
                         child: Text(
                           bookItem.title,
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Colors.white,
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -67,7 +65,7 @@ class BooksGridLayout extends StatelessWidget {
                         child: Text(
                           bookItem.author,
                           style: TextStyle(
-                            color: Colors.white70,
+                            color: Colors.white,
                             fontSize: 12.0,
                           ),
                         ),

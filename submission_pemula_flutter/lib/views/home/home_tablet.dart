@@ -59,8 +59,8 @@ class HomeTabletLayout extends StatelessWidget {
               padding: EdgeInsets.only(top: 8.0),
               height: 250.0,
               child: BooksGridLayout(
-                gridCount: 1,
-                scrollDirection: Axis.horizontal,
+                gridCount: 4,
+                scrollDirection: Axis.vertical,
                 catalouge: bookCatalougeList.reversed,
               ),
             ),
