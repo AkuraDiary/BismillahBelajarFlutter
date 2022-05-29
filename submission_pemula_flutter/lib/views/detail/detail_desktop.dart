@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:submission_pemula_flutter/views/layout/BooksGridLayout.dart';
 
 import '../../models/books.dart';
+import '../main_screen.dart';
 
 class DetailDesktopPage extends StatefulWidget {
   final Books bookItem;
@@ -47,6 +49,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                 icon: Icon(Icons.arrow_back, color: Colors.deepOrange),
                                 onPressed: () {
                                   Navigator.pop(context);
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
                                 }),
                           ),
                           Text(
@@ -73,9 +76,12 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                   Card(
                                     margin: EdgeInsets.all(16),
                                     elevation: 4,
-                                    child: ClipRRect(
-                                      child: Image.network(widget.bookItem.imageUrl),
-                                      borderRadius: BorderRadius.circular(10),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: ClipRRect(
+                                        child: Image.network(widget.bookItem.imageUrl),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
                                     ),
                                   ),
                                   SizedBox(height: 16),
@@ -85,6 +91,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                           )
                       ),
                       SizedBox(width: 32),
+
                       Expanded(
                         child: Card(
                           shape: RoundedRectangleBorder(
@@ -107,6 +114,8 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     ),
                                   ),
                                 ),
+
+                                SizedBox(height: 16),
 
                                 Row(
                                   children: <Widget>[
@@ -163,15 +172,37 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     ),
                                   ],
                                 ),
-                                Container(
-                                  padding: EdgeInsets.symmetric(vertical: 16.0),
-                                  child: Text(
-                                    widget.bookItem.description,
-                                    textAlign: TextAlign.justify,
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-                                      fontFamily: 'Montserrat',
-                                    ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 16.0),
+                      Expanded(
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          elevation: 8.0,
+                          shadowColor: Colors.deepOrange,
+                          child: Container(
+                            padding: EdgeInsets.all(24),
+                            child: Column(
+                              children: [
+                                Text(
+                                  "Deskripsi : ",
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                SizedBox(height: 8.0),
+                                Text(
+                                  widget.bookItem.description,
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    fontFamily: 'Montserrat',
                                   ),
                                 ),
                               ],
@@ -181,7 +212,25 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                       ),
                     ],
                   ),
-
+                  Container(
+                    margin: EdgeInsets.only(top: 20.0),
+                    child: Text("Rekomendasi lainya: ",
+                        style: TextStyle(
+                            fontSize: 16,
+                            fontFamily: "Montserrat",
+                            color: Colors.deepOrange
+                        )
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(top: 4.0),
+                    height: 250.0,
+                    child: BooksGridLayout(
+                      gridCount: 5,
+                      scrollDirection: Axis.vertical,
+                      catalouge: bookCatalougeList,
+                    ),
+                  ),
                 ],
               ),
             ),
