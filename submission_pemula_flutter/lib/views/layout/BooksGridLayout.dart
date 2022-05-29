@@ -7,11 +7,12 @@ class BooksGridLayout extends StatelessWidget {
   final int gridCount;
   final Axis scrollDirection;
   final Iterable<Books> catalouge;
+  final ScrollController _scrollerController = ScrollController();
 
-  BooksGridLayout(
-      {required this.gridCount,
-      required this.scrollDirection,
-      required this.catalouge});
+  BooksGridLayout({
+    required this.gridCount,
+    required this.scrollDirection,
+    required this.catalouge});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class BooksGridLayout extends StatelessWidget {
       padding: const EdgeInsets.all(20),
       child: Scrollbar(
         thumbVisibility: true,
+        controller: _scrollerController,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: GridView.count(
@@ -79,5 +81,10 @@ class BooksGridLayout extends StatelessWidget {
         ),
       ),
     );
+  }
+
+
+  dispose() {
+    _scrollerController.dispose();
   }
 }
