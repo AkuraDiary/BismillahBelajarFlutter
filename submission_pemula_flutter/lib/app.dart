@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget {
       title: 'Submission 1',
 
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primaryColor: Colors.red,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+
       ),
 
       home: MainScreen(),

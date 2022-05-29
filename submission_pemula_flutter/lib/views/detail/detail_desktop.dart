@@ -52,6 +52,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => MainScreen()));
                                 }),
                           ),
+                          SizedBox(width: 16),
                           Text(
                             widget.bookItem.title,
                             style: TextStyle(
@@ -98,7 +99,6 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           elevation: 8,
-                          shadowColor: Colors.deepOrange,
                           child: Container(
                             padding: const EdgeInsets.all(16),
                             child: Column(
@@ -184,7 +184,6 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                             borderRadius: BorderRadius.circular(20.0),
                           ),
                           elevation: 8.0,
-                          shadowColor: Colors.deepOrange,
                           child: Container(
                             padding: EdgeInsets.all(24),
                             child: Column(
@@ -218,7 +217,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                         style: TextStyle(
                             fontSize: 16,
                             fontFamily: "Montserrat",
-                            color: Colors.deepOrange
+
                         )
                     ),
                   ),

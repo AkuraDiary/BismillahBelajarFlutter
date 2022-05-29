@@ -20,7 +20,7 @@ class HomeDesktopLayout extends StatelessWidget {
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         fontFamily: "Montserrat",
-                        color: Colors.deepOrange,
+
                     )
                 ),
               ),
@@ -32,7 +32,7 @@ class HomeDesktopLayout extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
-                      color: Colors.deepOrange,
+
                       fontWeight: FontWeight.bold
                   )
               ),
@@ -53,7 +53,7 @@ class HomeDesktopLayout extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
-                      color: Colors.deepOrange,
+
                       fontWeight: FontWeight.bold
                   )
               ),
@@ -76,7 +76,7 @@ class HomeDesktopLayout extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 16,
                       fontFamily: "Montserrat",
-                      color: Colors.deepOrange,
+
                       fontWeight: FontWeight.bold
                   )
               ),
