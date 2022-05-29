@@ -16,7 +16,7 @@ class BooksGridLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(20),
       child: Scrollbar(
         thumbVisibility: true,
         child: Padding(
@@ -34,7 +34,11 @@ class BooksGridLayout extends StatelessWidget {
                   }));
                 },
                 child: Card(
-                  elevation: 2,
+                  color: Colors.deepOrangeAccent,
+                  elevation: 4,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -45,10 +49,11 @@ class BooksGridLayout extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8.0, top: 8.0),
+                        padding: const EdgeInsets.only(left: 12.0, top: 10.0),
                         child: Text(
                           bookItem.title,
                           style: TextStyle(
+                            color: Colors.white70,
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -56,9 +61,13 @@ class BooksGridLayout extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
-                            left: 8.0, bottom: 8.0, top: 6.0),
+                            left: 12.0, bottom: 10.0, top: 6.0),
                         child: Text(
                           bookItem.author,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 12.0,
+                          ),
                         ),
                       ),
                     ],
