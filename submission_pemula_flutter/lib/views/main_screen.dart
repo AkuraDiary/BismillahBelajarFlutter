@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:submission_pemula_flutter/models/books.dart';
+
+import 'package:submission_pemula_flutter/views/home/home_desktop.dart';
 import 'package:submission_pemula_flutter/views/home/home_mobile.dart';
 import 'package:submission_pemula_flutter/views/home/home_tablet.dart';
 
-import 'layout/BooksGridLayout.dart';
 
 class MainScreen extends StatelessWidget {
   @override
@@ -16,11 +16,7 @@ class MainScreen extends StatelessWidget {
             } else if (constraints.maxWidth <= 1200) {
               return HomeTabletLayout();
             } else {
-              return BooksGridLayout(
-                gridCount: 7,
-                scrollDirection: Axis.vertical,
-                catalouge: bookCatalougeList,
-              );
+              return HomeDesktopLayout();
         }
       }),
     );
