@@ -54,4 +54,39 @@ var bookCatalougeList = [
       imageUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1584173524l/52366756._SY475_.jpg"
   ),
 
+  Books(
+      title: 'Jujutsu Kaisen 06',
+      author: "Gege Akutami",
+      type: "Manga",
+      pages: "200",
+      date: "2022",
+      publisher: "Elex Media komputindo",
+      description: "Tim Kyoto memanfaatkan program pertukaran untuk membunuh Itadori...!! Di sisi lain, Jurei dan Jusoshi yang dipimpin Mahito menyusup masuk ke tempat berlangsungnya acara. Para guru pun bergegas pergi untuk menyelamatkan murid-murid, tapi mereka terhalang oleh Tobari! ",
+      imageUrl: "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/4/1/cf548c4a-2ab5-4163-bade-3d5024e7b777.jpg"
+  ),
+
+  Books(
+      title: 'DEMON SLAYER : Kimetsu no Yaiba 08',
+      author: "Koyoharu Gotouge",
+      type: "Manga",
+      pages: "200",
+      date: "2022",
+      publisher: "Elex Media komputindo",
+      description: "Bagaimana akhir dari pertarungan antara \"Iblis Penidur\" Enmu melawan Tanjiro yang melancarkan jurus pamungkas Hinokami Kagura `Hekira no Ten`!? Namun, tiba-tiba saja sosok baru muncul di hadapan Tanjiro! Enbashira Kyojuro Rengoku pun beraksi.",
+      imageUrl: "https://images-na.ssl-images-amazon.com/images/I/81CcEq7wQPL.jpg"
+  ),
+
+  Books(
+      title: 'Lukacita',
+      author: "Valerie Patkar",
+      type: "Novel",
+      pages: "452",
+      date: "2022",
+      publisher: "BHUANA ILMU POPULER",
+      description: "Untuk mereka yang berhasil menggapai cita-cita, tetapi masih terluka karenanya. Lukacita bercerita tentang para pemimpi yang dikhianati cita-cita mereka sendiri. Ada seorang pendiri perusahaan startup idealis bernama Javier dan seorang mantan atlet catur penakut bernama Utara.",
+      imageUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1641215134l/60016154._SX318_.jpg"
+  ),
+
+
+
 ];
