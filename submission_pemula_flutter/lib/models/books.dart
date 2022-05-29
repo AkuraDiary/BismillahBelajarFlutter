@@ -3,6 +3,8 @@ class Books {
   String author;
   String type;
   String pages;
+  String date;
+  String publisher;
   String description;
   String imageUrl;
 
@@ -11,6 +13,8 @@ class Books {
     required this.author,
     required this.type,
     required this.pages,
+    required this.date,
+    required this.publisher,
     required this.description,
     required this.imageUrl
   });
