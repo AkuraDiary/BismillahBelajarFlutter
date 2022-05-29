@@ -65,6 +65,27 @@ class HomeMobileLayout extends StatelessWidget {
                 catalouge: bookCatalougeList.reversed,
               ),
             ),
+
+            Container(
+              alignment: Alignment.topLeft,
+              padding: EdgeInsets.only(left: 16, right: 16, top: 16),
+              child: Text("Buku Terbaru",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontFamily: "Montserrat",
+                      color: Colors.deepOrange
+                  )
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 8.0),
+              height: 250.0,
+              child: BooksGridLayout(
+                gridCount: 1,
+                scrollDirection: Axis.horizontal,
+                catalouge: bookCatalougeList,
+              ),
+            ),
           ],
         ),
       ),
