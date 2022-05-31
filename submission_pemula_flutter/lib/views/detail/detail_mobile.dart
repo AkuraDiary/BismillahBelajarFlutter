@@ -114,33 +114,35 @@ class DetailMobilePage extends StatelessWidget {
             /*ICONS*/
             Container(
               margin: const EdgeInsets.all(16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  Column(children: <Widget>[
-                    const Icon(Icons.person),
-                    const SizedBox(height: 8.0),
-                    Text(bookItem.author),
+              child: Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisSize: MainAxisSize.max,
+                  children: <Widget>[
+                    Column(children: <Widget>[
+                      const Icon(Icons.person),
+                      const SizedBox(height: 8.0),
+                      Text(bookItem.author),
 
-                    const SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
 
-                    const Icon(Icons.calendar_today),
-                    const SizedBox(height: 8.0),
-                    Text(bookItem.date),
-                  ]),
-                  Column(children: <Widget>[
-                    const Icon(Icons.newspaper),
-                    const SizedBox(height: 8.0),
-                    Text("${bookItem.pages} Lembar"),
+                      const Icon(Icons.calendar_today),
+                      const SizedBox(height: 8.0),
+                      Text(bookItem.date),
+                    ]),
+                    Column(children: <Widget>[
+                      const Icon(Icons.newspaper),
+                      const SizedBox(height: 8.0),
+                      Text("${bookItem.pages} Lembar"),
 
-                    const SizedBox(height: 16.0),
+                      const SizedBox(height: 16.0),
 
-                    const Icon(Icons.menu_book),
-                    const SizedBox(height: 8.0),
-                    Text(bookItem.publisher, softWrap: true,),
-                  ]),
-                ],
+                      const Icon(Icons.menu_book),
+                      const SizedBox(height: 8.0),
+                      Text(bookItem.publisher, softWrap: true,),
+                    ]),
+                  ],
+                ),
               ),
             ),
           ],
