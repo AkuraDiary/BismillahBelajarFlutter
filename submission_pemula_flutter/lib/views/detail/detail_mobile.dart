@@ -103,10 +103,12 @@ class DetailMobilePage extends StatelessWidget {
 
             Container(
               padding: const EdgeInsets.only(top: 16.0, left: 24.0, right: 24.0),
-              child: Text(
-                bookItem.description,
-                textAlign: TextAlign.justify,
-                style: const TextStyle(fontSize: 16.0),
+              child: Expanded(
+                child: Text(
+                  bookItem.description,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(fontSize: 16.0),
+                ),
               ),
             ),
 
