@@ -4,24 +4,12 @@ import 'package:submission_pemula_flutter/views/layout/BooksGridLayout.dart';
 import '../../models/books.dart';
 import '../main_screen.dart';
 
-class DetailDesktopPage extends StatefulWidget {
+class DetailDesktopPage extends StatelessWidget {
   final Books bookItem;
 
   const DetailDesktopPage({required this.bookItem});
 
-  @override
-  State<DetailDesktopPage> createState() => _DetailDesktopPageState();
-}
 
-class _DetailDesktopPageState extends State<DetailDesktopPage> {
-
-  final _scrollerController = ScrollController();
-
-  @override
-  dispose() {
-    _scrollerController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +42,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                           ),
                           const SizedBox(width: 16),
                           Text(
-                            widget.bookItem.title,
+                            bookItem.title,
                             style: const TextStyle(
                               fontSize: 32,
                               fontFamily: 'Montserrat',
@@ -80,7 +68,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: ClipRRect(
-                                        child: Image.network(widget.bookItem.imageUrl),
+                                        child: Image.network(bookItem.imageUrl),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                     ),
@@ -105,7 +93,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                               mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
                                 Text(
-                                  widget.bookItem.title,
+                                  bookItem.title,
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
                                     fontSize: 30.0,
@@ -120,7 +108,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     const Icon(Icons.book),
                                     const SizedBox(width: 8.0),
                                     Text(
-                                      widget.bookItem.type,
+                                      bookItem.type,
 
                                     ),
                                   ],
@@ -132,7 +120,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     const Icon(Icons.person),
                                     const SizedBox(width: 8.0),
                                     Text(
-                                      widget.bookItem.author,
+                                      bookItem.author,
 
                                     ),
                                   ],
@@ -143,7 +131,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     const Icon(Icons.calendar_today),
                                     const SizedBox(width: 8.0),
                                     Text(
-                                      widget.bookItem.date,
+                                     bookItem.date,
 
                                     ),
                                   ],
@@ -154,7 +142,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     const Icon(Icons.newspaper),
                                     const SizedBox(width: 8.0),
                                     Text(
-                                      widget.bookItem.pages,
+                                    bookItem.pages,
 
                                     ),
                                   ],
@@ -165,7 +153,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                     const Icon(Icons.menu_book),
                                     const SizedBox(width: 8.0),
                                     Text(
-                                      widget.bookItem.publisher,
+                                      bookItem.publisher,
 
                                     ),
                                   ],
@@ -195,7 +183,7 @@ class _DetailDesktopPageState extends State<DetailDesktopPage> {
                                 ),
                                 const SizedBox(height: 8.0),
                                 Text(
-                                  widget.bookItem.description,
+                                  bookItem.description,
                                   textAlign: TextAlign.left,
                                   style: const TextStyle(
                                     fontSize: 16.0,
