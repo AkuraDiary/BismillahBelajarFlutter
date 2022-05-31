@@ -121,8 +121,8 @@ var bookCatalougeList = [
   ),
 
   Books(
-      title: 'Yazid bin Abdul Qadir Jawas',
-      author: "Dzikir PAGI PETANG dan Sesudah Shalat",
+      title: 'Dzikir PAGI PETANG dan Sesudah Shalat',
+      author: "Yazid bin Abdul Qadir Jawas",
       type: "Religi",
       pages: "126",
       date: "2017",
